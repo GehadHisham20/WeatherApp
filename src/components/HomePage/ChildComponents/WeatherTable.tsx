@@ -48,7 +48,7 @@ export default function WeatherTable({
     setIsLoading(true);
     axiosApiInstance
       .get(
-        `/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY + 'ss'}&q=${
+        `/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${
           selected.lat
         },${selected.lng}&days=5`
       )

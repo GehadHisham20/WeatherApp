@@ -55,8 +55,8 @@ export default function SearchBar({ setSelectedCoordinates }: ISearchBarProps) {
           },
         }}
         options={options}
-        isOptionEqualToValue={(options: IPlace, value: IPlace) => {
-          return options.id === value.id;
+        isOptionEqualToValue={(option: IPlace, value: IPlace) => {
+          return option.id === value?.id;
         }}
         filterOptions={(x) => x} //to disable the built-in filtering
         renderInput={(params) => (
@@ -95,7 +95,7 @@ export default function SearchBar({ setSelectedCoordinates }: ISearchBarProps) {
         loadingText={'loading...'}
         renderOption={(props, option) => {
           return (
-            <li {...props}>
+            <li {...props} key={option.id}>
               <Grid container alignItems="center" justifyContent={'flex-start'}>
                 <Grid item sx={{ display: 'flex', width: 44 }}>
                   <LocationOnIcon sx={{ color: 'text.secondary' }} />

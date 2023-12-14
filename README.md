@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+## What I Used
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. [Vite](https://vitejs.dev/)
+2. [MUI](https://mui.com/)
+3. [Axios](https://www.axios.com/)
+4. [pnpm](https://pnpm.io/installation)
+5. [WeatherAPI](https://www.weatherapi.com/)
+6. Typescript
 
-Currently, two official plugins are available:
+## Steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Install Dependencies
 
-## Expanding the ESLint configuration
+Use the package manager [pnpm](https://pnpm.io/installation) to install dependencies.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+pnpm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Get Key
+
+Sign up in [WeatherAPI](https://www.weatherapi.com/) , Get your key to use in the project
+
+### Setup .env file
+
+put variables (provided in .env.example) in your .env file
+
+```bash
+VITE_WEATHER_API_BASE_URL="http://api.weatherapi.com/v1" //from documentation
+VITE_WEATHER_API_KEY="your_key" //from the previous step
+```
+
+### Open Project
+
+```bash
+pnpm run dev
+```

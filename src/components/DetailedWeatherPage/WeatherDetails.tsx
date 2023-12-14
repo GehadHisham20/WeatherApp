@@ -65,7 +65,7 @@ const WeatherDetails = () => {
             >
               {isLoading ? (
                 <CircularProgress />
-              ) : errorComponent ? (
+              ) : errorComponent || !data ? (
                 'No Location Detected ...'
               ) : (
                 ''
